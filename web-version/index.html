@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Game sederhana untuk menebak tanggal lahir teman."
+    >
+
+    <title>Tebak Tanggal Lahir</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         BACKGROUND DECORATION
+    ========================================= -->
+    <div class="background-decoration" aria-hidden="true">
+        <span class="circle circle-1"></span>
+        <span class="circle circle-2"></span>
+        <span class="circle circle-3"></span>
+        <span class="circle circle-4"></span>
+    </div>
+
+
+    <!-- ========================================
+         APPLICATION
+    ========================================= -->
+    <main id="app">
+
+
+        <!-- ====================================
+             HOME SCREEN
+        ===================================== -->
+        <section
+            id="home-screen"
+            class="screen screen-home"
+        >
+
+            <div class="screen-content">
+
+                <!-- Illustration -->
+                <div class="illustration illustration-home">
+                    <img
+                        src="assets/images/gift.webp"
+                        alt="Ilustrasi hadiah"
+                    >
+                </div>
+
+
+                <!-- Title -->
+                <h1 class="home-title">
+                    Tebak Tanggal Lahir<br>
+                    Temanmu!
+                </h1>
+
+
+                <!-- Start Button -->
+                <button
+                    id="start-button"
+                    class="btn btn-primary"
+                    type="button"
+                >
+                    MULAI
+                </button>
+
+
+                <!-- Progress / Decoration -->
+                <div class="home-decoration" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+
+                <!-- Credit -->
+                <div class="credit">
+
+                    <div class="credit-illustration">
+                        <img
+                            src="assets/images/developer.webp"
+                            alt=""
+                        >
+                    </div>
+
+                    <div class="credit-info">
+                        <strong>
+                            Akhmad Faiz Abdulloh
+                        </strong>
+
+                        <span>
+                            Huawei Student Developer ITTS
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================
+             DATE GUESSING SCREEN
+        ===================================== -->
+        <section
+            id="date-screen"
+            class="screen screen-game"
+            hidden
+        >
+
+            <div class="screen-content">
+
+                <!-- Question -->
+                <div class="question">
+
+                    <h2>
+                        Apakah tanggal lahir kamu<br>
+                        ada pada tabel ini?
+                    </h2>
+
+                </div>
+
+
+                <!-- Table Title -->
+                <p
+                    id="date-table-title"
+                    class="table-title"
+                >
+                    Tabel 1
+                </p>
+
+
+                <!-- Number Table -->
+                <div
+                    id="date-table"
+                    class="number-table"
+                >
+                    <!--
+                        Angka akan dibuat oleh JavaScript.
+                    -->
+                </div>
+
+
+                <!-- Answer Buttons -->
+                <div class="answer-buttons">
+
+                    <button
+                        id="date-yes-button"
+                        class="btn btn-primary"
+                        type="button"
+                    >
+                        IYA
+                    </button>
+
+                    <button
+                        id="date-no-button"
+                        class="btn btn-primary"
+                        type="button"
+                    >
+                        TIDAK
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================
+             MONTH GUESSING SCREEN
+        ===================================== -->
+        <section
+            id="month-screen"
+            class="screen screen-game"
+            hidden
+        >
+
+            <div class="screen-content">
+
+                <!-- Question -->
+                <div class="question">
+
+                    <h2>
+                        Apakah bulan lahir kamu<br>
+                        ada pada tabel ini?
+                    </h2>
+
+                </div>
+
+
+                <!-- Table Title -->
+                <p
+                    id="month-table-title"
+                    class="table-title"
+                >
+                    Tabel Bulan 1
+                </p>
+
+
+                <!-- Month Table -->
+                <div
+                    id="month-table"
+                    class="number-table month-table"
+                >
+                    <!--
+                        Angka bulan akan dibuat
+                        oleh JavaScript.
+                    -->
+                </div>
+
+
+                <!-- Answer Buttons -->
+                <div class="answer-buttons">
+
+                    <button
+                        id="month-yes-button"
+                        class="btn btn-primary"
+                        type="button"
+                    >
+                        IYA
+                    </button>
+
+                    <button
+                        id="month-no-button"
+                        class="btn btn-primary"
+                        type="button"
+                    >
+                        TIDAK
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================
+             RESULT SCREEN
+        ===================================== -->
+        <section
+            id="result-screen"
+            class="screen screen-result"
+            hidden
+        >
+
+            <div class="screen-content">
+
+                <!-- Birthday Illustration -->
+                <div class="illustration illustration-result">
+                    <img
+                        src="assets/images/birthday.webp"
+                        alt="Ilustrasi ulang tahun"
+                    >
+                </div>
+
+
+                <!-- Result Label -->
+                <p class="result-label">
+                    ANDA LAHIR PADA TANGGAL
+                </p>
+
+
+                <!-- Date -->
+                <p
+                    id="result-date"
+                    class="result-date"
+                >
+                    31
+                </p>
+
+
+                <!-- Month -->
+                <p
+                    id="result-month"
+                    class="result-month"
+                >
+                    Desember
+                </p>
+
+
+                <!-- Home Button -->
+                <button
+                    id="home-button"
+                    class="btn btn-primary"
+                    type="button"
+                >
+                    HOME
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script
+        src="js/data.js"
+        defer
+        ></script>
+
+    <script
+        src="js/app.js"
+        defer
+    ></script>
+
+</body>
+
+</html>
